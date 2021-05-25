@@ -43,6 +43,7 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int)
 	ChangeWindowMode(true);
 	DxLib_Init();
 	SetGraphMode(640, 480, 16);
+	SetWindowText(L"1916016_ìáë∫èrãP");
 	SetDrawScreen(DX_SCREEN_BACK);
 
 	Rect rcA = { 100,100,50,50 };
@@ -53,6 +54,7 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int)
 	{
 		ClearDrawScreen();
 		GetHitKeyStateAll(key);
+
 		move(key, rcA);
 		DrawBox(rcA.Left(), rcA.Top(),
 			rcA.Right(), rcA.Down(), 0xffffff, true);
